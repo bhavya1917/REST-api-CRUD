@@ -10,7 +10,9 @@ import java.util.Set;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.ResourceUtils;
 
 import com.api.model.BasicModelAbstract;
 
@@ -21,7 +23,7 @@ public class RestWriteRepository extends RestParseJsonRepository {
 
 	public void filewriter(JSONObject jsonObject) {
 		try {
-			FileWriter writer = new FileWriter(new File(System.getProperty("user.home") + "/store.json"));
+			FileWriter writer = new FileWriter(new ClassPathResource("store.json").getFile());
 			writer.write(jsonObject.toJSONString());
 			writer.close();
 		} catch (IOException e) {

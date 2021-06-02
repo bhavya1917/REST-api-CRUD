@@ -3,6 +3,7 @@ package com.api.repository;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import org.json.simple.JSONArray;
@@ -10,6 +11,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.ResourceUtils;
 
 import com.api.model.Author;
 import com.api.model.BasicModelAbstract;
@@ -37,7 +40,9 @@ public class RestParseJsonRepository {
 	}
 
 	private JSONObject getJsonObject() throws FileNotFoundException, IOException, ParseException {
-		FileReader reader = new FileReader(new File(System.getProperty("user.home") + "/store.json"));
+		FileReader reader = new FileReader(new ClassPathResource("store.json").getFile()
+				);
+//		FileReader reader = new FileReader(ResourceUtils.getFile("classpath:store.json"));
 		JSONParser jsonParser = new JSONParser();
 		JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
 		reader.close();
