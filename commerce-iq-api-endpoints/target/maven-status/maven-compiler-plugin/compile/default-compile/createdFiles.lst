@@ -1,0 +1,16 @@
+com\api\service\RestFetchService.class
+com\api\Main.class
+com\api\model\Author.class
+com\api\model\BasicModel.class
+com\api\model\MessageResponse.class
+com\api\controller\RestFetchController.class
+com\api\controller\RestWriteController.class
+com\api\model\Post.class
+com\api\model\AuthorModel.class
+com\api\repository\RestParseJsonRepository.class
+com\api\repository\RestWriteRepository.class
+com\api\model\PostModel.class
+com\api\model\BasicModelAbstract.class
+com\api\logError\LogExceptionMessage.class
+com\api\service\RestWriteService.class
+com\api\repository\RestFetchRepository.class
