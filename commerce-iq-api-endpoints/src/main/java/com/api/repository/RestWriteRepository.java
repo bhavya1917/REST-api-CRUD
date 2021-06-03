@@ -1,5 +1,6 @@
 package com.api.repository;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashSet;
@@ -9,7 +10,6 @@ import java.util.Set;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 
 import com.api.model.BasicModelAbstract;
@@ -19,18 +19,16 @@ public class RestWriteRepository extends RestParseJsonRepository {
 	@Autowired
 	RestFetchRepository restFetchRepository;
 
-	public void filewriter(JSONObject jsonObject) {
-		try {
-			FileWriter writer = new FileWriter(new ClassPathResource("store.json").getFile());
-			writer.write(jsonObject.toJSONString());
-			writer.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public void filewriter(JSONObject jsonObject) throws IOException {
+		String path=System.getProperty("user.home")+"/store.json";
+	    File customDir = new File(path);
+	    FileWriter writer=new FileWriter(customDir);
+	    writer.write(jsonObject.toJSONString());
+	    writer.close();
 	}
 
 	@SuppressWarnings("unchecked")
-	public boolean createElement(BasicModelAbstract element, String type) {
+	public boolean createElement(BasicModelAbstract element, String type) throws IOException {
 		if (!restFetchRepository.validateID(element.getID(), type)) {
 			JSONObject object = getJsonArray();
 			JSONArray array = (JSONArray) object.get(type);
@@ -43,7 +41,7 @@ public class RestWriteRepository extends RestParseJsonRepository {
 	}
 
 	@SuppressWarnings("unchecked")
-	public boolean deleteElement(String element, int id) {
+	public boolean deleteElement(String element, int id) throws IOException {
 		if (restFetchRepository.validateID(id, element)) {
 			JSONObject jsonObject = getJsonArray();
 			JSONArray jsonArray = (JSONArray) jsonObject.get(element);
@@ -63,7 +61,7 @@ public class RestWriteRepository extends RestParseJsonRepository {
 	}
 
 	@SuppressWarnings("unchecked")
-	public boolean updateElement(int id, Map<String, Object> update, String element) {
+	public boolean updateElement(int id, Map<String, Object> update, String element) throws IOException {
 		if (restFetchRepository.validateID(id, element) && !update.containsKey("id")) {
 			JSONObject jsonObject = getJsonArray();
 			JSONArray jsonArray = (JSONArray) jsonObject.get(element);
@@ -84,7 +82,7 @@ public class RestWriteRepository extends RestParseJsonRepository {
 	}
 
 	@SuppressWarnings("unchecked")
-	public boolean putElement(int id, BasicModelAbstract element, String type) {
+	public boolean putElement(int id, BasicModelAbstract element, String type) throws IOException {
 		if (restFetchRepository.validateID(id, type)) {
 			JSONObject jsonObject = getJsonArray();
 			JSONArray jsonArray = (JSONArray) jsonObject.get(type);

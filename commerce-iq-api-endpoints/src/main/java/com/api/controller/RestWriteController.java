@@ -1,5 +1,6 @@
 package com.api.controller;
 
+import java.io.IOException;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class RestWriteController {
 	RestWriteService writeService;
 
 	@PostMapping("/authors")
-	public ResponseEntity<MessageResponse> createAuthor(@RequestBody Author author) {
+	public ResponseEntity<MessageResponse> createAuthor(@RequestBody Author author) throws IOException {
 		try {
 			writeService.createAuthor(author);
 			return ResponseEntity
@@ -35,7 +36,7 @@ public class RestWriteController {
 	}
 
 	@PutMapping("/author/{authId}")
-	public ResponseEntity<MessageResponse> putAuthor(@PathVariable("authId") int authId, @RequestBody Author author) {
+	public ResponseEntity<MessageResponse> putAuthor(@PathVariable("authId") int authId, @RequestBody Author author) throws IOException {
 		try {
 			writeService.putAuthor(authId, author);
 			return ResponseEntity
@@ -46,7 +47,7 @@ public class RestWriteController {
 	}
 
 	@PutMapping("/post/{postId}")
-	public ResponseEntity<MessageResponse> putPost(@PathVariable("postId") int postId, @RequestBody Post post) {
+	public ResponseEntity<MessageResponse> putPost(@PathVariable("postId") int postId, @RequestBody Post post) throws IOException {
 		try {
 			writeService.putPost(postId, post);
 			return ResponseEntity
@@ -57,7 +58,7 @@ public class RestWriteController {
 	}
 
 	@PostMapping("/posts")
-	public ResponseEntity<MessageResponse> createPost(@RequestBody Post post) {
+	public ResponseEntity<MessageResponse> createPost(@RequestBody Post post) throws IOException {
 		try {
 			writeService.createPost(post);
 			return ResponseEntity
@@ -69,7 +70,7 @@ public class RestWriteController {
 	}
 
 	@DeleteMapping("/authors/{authid}")
-	public ResponseEntity<MessageResponse> deleteAuthor(@PathVariable("authid") int authid) {
+	public ResponseEntity<MessageResponse> deleteAuthor(@PathVariable("authid") int authid) throws IOException {
 		try {
 			writeService.deleteAuthorbyId(authid);
 			return ResponseEntity
@@ -80,7 +81,7 @@ public class RestWriteController {
 	}
 
 	@DeleteMapping("/posts/{postid}")
-	public ResponseEntity<MessageResponse> deletePost(@PathVariable("postid") int postid) {
+	public ResponseEntity<MessageResponse> deletePost(@PathVariable("postid") int postid) throws IOException {
 		try {
 			writeService.deletePostbyId(postid);
 			return ResponseEntity
@@ -92,7 +93,7 @@ public class RestWriteController {
 
 	@PatchMapping("/posts/{postId}")
 	public ResponseEntity<MessageResponse> updatePost(@PathVariable("postId") int postId,
-			@RequestBody Map<String, Object> map) {
+			@RequestBody Map<String, Object> map) throws IOException {
 		try {
 			writeService.updatePost(postId, map);
 			return ResponseEntity
@@ -104,7 +105,7 @@ public class RestWriteController {
 
 	@PatchMapping("/authors/{authorId}")
 	public ResponseEntity<MessageResponse> updateAuthor(@PathVariable("authorId") int authId,
-			@RequestBody Map<String, Object> map) {
+			@RequestBody Map<String, Object> map) throws IOException {
 		try {
 			writeService.updateAuthor(authId, map);
 			return ResponseEntity

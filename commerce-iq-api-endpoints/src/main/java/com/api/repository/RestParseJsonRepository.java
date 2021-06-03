@@ -1,9 +1,9 @@
 package com.api.repository;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -37,10 +37,13 @@ public class RestParseJsonRepository {
 	}
 
 	private JSONObject getJsonObject() throws FileNotFoundException, IOException, ParseException {
-		InputStream in = this.getClass().getClassLoader().getResourceAsStream("store.json");
-		JSONParser jsonParser = new JSONParser();
-		return (JSONObject)jsonParser.parse(
-				new InputStreamReader(in, "UTF-8"));
+		 JSONParser jsonParser = new JSONParser();
+		    String path=System.getProperty("user.home")+"/store.json";
+		    File customDir = new File(path);
+		    FileReader reader=new FileReader(customDir);
+			JSONObject jsonObject = (JSONObject)jsonParser.parse(reader);
+			reader.close();
+			return jsonObject;
 	}
 
 	public BasicModelAbstract parseElementObject(JSONObject object, String element) {
