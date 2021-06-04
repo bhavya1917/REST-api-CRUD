@@ -49,8 +49,8 @@ public class RestParseJsonRepository {
 	public BasicModelAbstract parseElementObject(JSONObject object, String element) {
 		switch (element) {
 		case "authors":
-			return new Author((String) object.get("lastName"), (String) object.get("firstName"),
-					((Long) object.get("id")).intValue(), ((Long) object.get("post")).intValue());
+			return new Author((String) object.get("firstName"), (String) object.get("lastName"),
+					((Long) object.get("post")).intValue(), ((Long) object.get("id")).intValue());
 
 		case "posts":
 			return new Post(((Long) object.get("id")).intValue(), (String) object.get("title"),

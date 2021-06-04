@@ -1,0 +1,1150 @@
+{
+	"variables": [],
+	"info": {
+		"name": "REST API - CRUD operation endpoints",
+		"_postman_id": "43a2722c-4c9a-691a-19d0-c4089cbd4001",
+		"description": "This postman collection contains REST APIs based on sprint boot application server deployed in AWS to perform various GET/POST/PUT/PATCH/DELETE operations.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all posts and authors",
+			"request": {
+				"url": "http://13.233.159.187:5001/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "a6795798-e167-4afa-a99a-c19e6550bd08",
+					"name": "Get all posts and authors",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 10:44:03 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 214,
+					"body": "[{\"posts\":[{\"reviews\":30,\"author\":\"Chetan Bhagat\",\"id\":4,\"title\":\"Two states\",\"views\":1000},{\"reviews\":30,\"author\":\"Agatha Cristie\",\"id\":3,\"title\":\"Murder On Orient Express\",\"views\":1000},{\"reviews\":30,\"author\":\"Bhavya\",\"id\":2,\"title\":\"Life on a highway\",\"views\":1000},{\"reviews\":80,\"author\":\"Arundhati Roy\",\"id\":1,\"title\":\"The Ministry of Utmost Happiness\",\"views\":78}],\"authors\":[{\"firstName\":\"Robert\",\"lastName\":\"Frost\",\"post\":1,\"id\":2},{\"firstName\":\"JK\",\"lastName\":\"Rowling\",\"post\":3,\"id\":3},{\"firstName\":\"Anne\",\"lastName\":\"Frank\",\"post\":61,\"id\":1},{\"firstName\":\"Anne\",\"lastName\":\"Frank\",\"post\":61,\"id\":4}]}]"
+				}
+			]
+		},
+		{
+			"name": "Get all authors",
+			"request": {
+				"url": "http://13.233.159.187:5001/authors",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "ff5a70e2-a991-446d-8b8b-dc4ce910d91d",
+					"name": "Get all authors",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/authors",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:36:57 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 349,
+					"body": "[{\"firstName\":\"Robert\",\"lastName\":\"Frost\",\"post\":1,\"id\":2,\"jsonobject\":{\"firstName\":\"Robert\",\"lastName\":\"Frost\",\"post\":1,\"id\":2}},{\"firstName\":\"JK\",\"lastName\":\"Rowling\",\"post\":3,\"id\":3,\"jsonobject\":{\"firstName\":\"JK\",\"lastName\":\"Rowling\",\"post\":3,\"id\":3}},{\"firstName\":\"Anne\",\"lastName\":\"Frank\",\"post\":61,\"id\":1,\"jsonobject\":{\"firstName\":\"Anne\",\"lastName\":\"Frank\",\"post\":61,\"id\":1}},{\"firstName\":\"Jane\",\"lastName\":\"Austen\",\"post\":54,\"id\":4,\"jsonobject\":{\"firstName\":\"Jane\",\"lastName\":\"Austen\",\"post\":54,\"id\":4}}]"
+				}
+			]
+		},
+		{
+			"name": "Get all posts",
+			"request": {
+				"url": "http://13.233.159.187:5001/posts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "e5010c3c-bca6-4dd1-a85d-af6e839d10af",
+					"name": "Get all posts",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/posts",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:37:46 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 275,
+					"body": "[{\"title\":\"Two states\",\"author\":\"Chetan Bhagat\",\"views\":1000,\"reviews\":30,\"id\":4,\"jsonobject\":{\"reviews\":30,\"author\":\"Chetan Bhagat\",\"id\":4,\"title\":\"Two states\",\"views\":1000}},{\"title\":\"Murder On Orient Express\",\"author\":\"Agatha Cristie\",\"views\":1000,\"reviews\":30,\"id\":3,\"jsonobject\":{\"reviews\":30,\"author\":\"Agatha Cristie\",\"id\":3,\"title\":\"Murder On Orient Express\",\"views\":1000}},{\"title\":\"The Ministry of Utmost Happiness\",\"author\":\"Arundhati Roy\",\"views\":78,\"reviews\":84,\"id\":1,\"jsonobject\":{\"reviews\":84,\"author\":\"Arundhati Roy\",\"id\":1,\"title\":\"The Ministry of Utmost Happiness\",\"views\":78}},{\"title\":\"What I Know For Sure\",\"author\":\"Oprah Winfrey\",\"views\":1900,\"reviews\":60,\"id\":2,\"jsonobject\":{\"reviews\":60,\"author\":\"Oprah Winfrey\",\"id\":2,\"title\":\"What I Know For Sure\",\"views\":1900}}]"
+				}
+			]
+		},
+		{
+			"name": "Get author filtered on ID",
+			"request": {
+				"url": "http://13.233.159.187:5001/authors/3",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "d2147f74-20a8-4b3a-9614-d6c719ae1b88",
+					"name": "Get author filtered on ID",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/authors/3",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 10:44:48 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 290,
+					"body": "{\"firstName\":\"JK\",\"lastName\":\"Rowling\",\"post\":3,\"id\":3,\"jsonobject\":{\"firstName\":\"JK\",\"lastName\":\"Rowling\",\"post\":3,\"id\":3}}"
+				}
+			]
+		},
+		{
+			"name": "Get post filtered on ID",
+			"request": {
+				"url": "http://13.233.159.187:5001/posts/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "7bb39fcd-bf66-40f8-9b6f-692690b0df5c",
+					"name": "Get post filtered on ID",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/posts/2",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 10:45:37 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 359,
+					"body": "{\"title\":\"Life on a highway\",\"author\":\"Bhavya\",\"views\":1000,\"reviews\":30,\"id\":2,\"jsonobject\":{\"reviews\":30,\"author\":\"Bhavya\",\"id\":2,\"title\":\"Life on a highway\",\"views\":1000}}"
+				}
+			]
+		},
+		{
+			"name": "Get author fileterd on first & last name",
+			"request": {
+				"url": {
+					"raw": "http://13.233.159.187:5001/author/?firstName=Robert&lastName=Frost",
+					"protocol": "http",
+					"host": [
+						"13",
+						"233",
+						"159",
+						"187"
+					],
+					"port": "5001",
+					"path": [
+						"author",
+						""
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Robert",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "lastName",
+							"value": "Frost",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "f990eccc-16e3-4bfe-b81a-eab500f71272",
+					"name": "Get author fileterd on first & last name",
+					"originalRequest": {
+						"url": {
+							"raw": "http://13.233.159.187:5001/author/?firstName=Robert&lastName=Frost",
+							"protocol": "http",
+							"host": [
+								"13",
+								"233",
+								"159",
+								"187"
+							],
+							"port": "5001",
+							"path": [
+								"author",
+								""
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Robert",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "lastName",
+									"value": "Frost",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 10:48:52 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 320,
+					"body": "[{\"firstName\":\"Robert\",\"lastName\":\"Frost\",\"post\":1,\"id\":2,\"jsonobject\":{\"firstName\":\"Robert\",\"lastName\":\"Frost\",\"post\":1,\"id\":2}}]"
+				}
+			]
+		},
+		{
+			"name": "Get post fileterd on title & author",
+			"request": {
+				"url": {
+					"raw": "http://13.233.159.187:5001/post/?title=Murder On Orient Express&author=Agatha Cristie",
+					"protocol": "http",
+					"host": [
+						"13",
+						"233",
+						"159",
+						"187"
+					],
+					"port": "5001",
+					"path": [
+						"post",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Murder On Orient Express",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "author",
+							"value": "Agatha Cristie",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "c5b9e954-b9eb-439e-ac9b-3288073f430f",
+					"name": "Get post fileterd on title & author",
+					"originalRequest": {
+						"url": {
+							"raw": "http://13.233.159.187:5001/post/?title=Murder On Orient Express&author=Agatha Cristie",
+							"protocol": "http",
+							"host": [
+								"13",
+								"233",
+								"159",
+								"187"
+							],
+							"port": "5001",
+							"path": [
+								"post",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Murder On Orient Express",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "author",
+									"value": "Agatha Cristie",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 10:59:23 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 337,
+					"body": "[{\"title\":\"Murder On Orient Express\",\"author\":\"Agatha Cristie\",\"views\":1000,\"reviews\":30,\"id\":3,\"jsonobject\":{\"reviews\":30,\"author\":\"Agatha Cristie\",\"id\":3,\"title\":\"Murder On Orient Express\",\"views\":1000}}]"
+				}
+			]
+		},
+		{
+			"name": "Create new author",
+			"request": {
+				"url": "http://13.233.159.187:5001/authors",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\t\t\"firstName\": \"Charles\",\r\n            \"lastName\": \"Dickens\",\r\n            \"post\": 19,\r\n            \"id\": 19\r\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "81da59f4-531d-4ab9-b037-ab55ad0beabf",
+					"name": "Create new author",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/authors",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\t\t\"firstName\": \"Charles\",\r\n            \"lastName\": \"Dickens\",\r\n            \"post\": 19,\r\n            \"id\": 19\r\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:32:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 485,
+					"body": "{\"message\":\"The author provided in the request has been successfully created.\"}"
+				}
+			]
+		},
+		{
+			"name": "Create new post",
+			"request": {
+				"url": "http://13.233.159.187:5001/posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\": \"Da Vinci Code\",\r\n  \"author\": \"Dan Brown\",\r\n  \"views\": 60,\r\n  \"reviews\": 30,\r\n  \"id\": 5\r\n  }"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "39a75867-de9b-468b-96aa-15d9347f26cd",
+					"name": "Create new post",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/posts",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"title\": \"Da Vinci Code\",\r\n  \"author\": \"Dan Brown\",\r\n  \"views\": 60,\r\n  \"reviews\": 30,\r\n  \"id\": 5\r\n  }"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:28:47 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 432,
+					"body": "{\"message\":\"The post provided in the request has been successfully added.\"}"
+				}
+			]
+		},
+		{
+			"name": "Replace existing author with new based on ID",
+			"request": {
+				"url": "http://13.233.159.187:5001/author/19",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\t  \"firstName\": \"Mark\",\r\n          \"lastName\": \"Twain\",\r\n          \"post\": 94,\r\n          \"id\": 5\r\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "3b0d2298-9391-48f4-92b8-20f751f671eb",
+					"name": "Replace existing author with new based on ID",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/author/19",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\t  \"firstName\": \"Mark\",\r\n          \"lastName\": \"Twain\",\r\n          \"post\": 94,\r\n          \"id\": 5\r\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:33:52 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 235,
+					"body": "{\"message\":\"The author provided in the request has been successfully added.\"}"
+				}
+			]
+		},
+		{
+			"name": "Replace existing post with new based on ID",
+			"request": {
+				"url": "http://13.233.159.187:5001/post/5",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\t\t\"author\": \"Ruskin Bond\",\r\n        \"title\": \"The Room On The Roof\",\r\n        \"views\": 1500,\r\n        \"reviews\": 34,\r\n        \"id\": 5\r\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "4d6c8cc1-b925-47a7-8ac2-1f99062ad4d3",
+					"name": "Replace existing post with new based on ID",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/post/5",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\t\t\"author\": \"Ruskin Bond\",\r\n        \"title\": \"The Room On The Roof\",\r\n        \"views\": 1500,\r\n        \"reviews\": 34,\r\n        \"id\": 5\r\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:30:31 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 416,
+					"body": "{\"message\":\"The post provided in the request has been successfully added.\"}"
+				}
+			]
+		},
+		{
+			"name": "Edit existing author's data",
+			"request": {
+				"url": "http://13.233.159.187:5001/authors/5",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"lastName\" : \"Charles\",\n  \"post\" : 76\n}"
+				},
+				"description": "NOTE: ID cannot be changed as it is immutable. All other fields excluding ID can be updated. "
+			},
+			"response": [
+				{
+					"id": "9433935f-1c44-4053-b6d3-a1946993eda5",
+					"name": "Edit existing author's data",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/authors/5",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"lastName\" : \"Charles\",\n  \"post\" : 76\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:36:22 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 386,
+					"body": "{\"message\":\"The author provided in the request has been successfully updated.\"}"
+				}
+			]
+		},
+		{
+			"name": "Edit existing post's data",
+			"request": {
+				"url": "http://13.233.159.187:5001/posts/5",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"reviews\": 84\r\n}"
+				},
+				"description": "NOTE: ID cannot be changed as it is immutable. All other fields excluding ID can be updated. "
+			},
+			"response": [
+				{
+					"id": "a0624162-d309-4eeb-ad7c-23f73ac7800f",
+					"name": "Edit existing post's data",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/posts/5",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"reviews\": 84\r\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:31:16 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 276,
+					"body": "{\"message\":\"The post provided in the request has been successfully updated.\"}"
+				}
+			]
+		},
+		{
+			"name": "Delete author based on ID",
+			"request": {
+				"url": "http://13.233.159.187:5001/authors/5",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "adaeb027-390d-4a5c-b9a7-2d5ef7dcdc92",
+					"name": "Delete author based on ID",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/authors/5",
+						"method": "DELETE",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:36:51 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 269,
+					"body": "{\"message\":\"The author provided in the request has been successfully deleted.\"}"
+				}
+			]
+		},
+		{
+			"name": "Delete post based on ID",
+			"request": {
+				"url": "http://13.233.159.187:5001/posts/5",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "e8c90c20-92e8-427f-a1d1-62e345da4c23",
+					"name": "Delete post based on ID",
+					"originalRequest": {
+						"url": "http://13.233.159.187:5001/posts/5",
+						"method": "DELETE",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 04 Jun 2021 11:31:30 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [],
+					"responseTime": 252,
+					"body": "{\"message\":\"The post provided in the request has been successfully deleted.\"}"
+				}
+			]
+		}
+	]
+}
